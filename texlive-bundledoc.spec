@@ -1,3 +1,9 @@
+# revision 22307
+# category Package
+# catalog-ctan /support/bundledoc
+# catalog-date 2011-05-03 08:14:39 +0200
+# catalog-license lppl
+# catalog-version 3.1
 Name:		texlive-bundledoc
 Version:	3.1
 Release:	1
@@ -56,6 +62,7 @@ filecontents* environment.
 %doc %{_texmfdir}/doc/man/man1/arlatex.man1.pdf
 %doc %{_mandir}/man1/bundledoc.1*
 %doc %{_texmfdir}/doc/man/man1/bundledoc.man1.pdf
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -73,3 +80,5 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
