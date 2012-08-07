@@ -1,12 +1,12 @@
-# revision 22307
+# revision 26313
 # category Package
 # catalog-ctan /support/bundledoc
-# catalog-date 2011-05-03 08:14:39 +0200
+# catalog-date 2012-01-12 19:29:56 +0100
 # catalog-license lppl
 # catalog-version 3.1
 Name:		texlive-bundledoc
 Version:	3.1
-Release:	2
+Release:	3
 Summary:	Bundle together all the files needed to build a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/bundledoc
