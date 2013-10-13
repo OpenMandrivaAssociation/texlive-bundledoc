@@ -1,4 +1,4 @@
-# revision 26313
+# revision 29752
 # category Package
 # catalog-ctan /support/bundledoc
 # catalog-date 2012-01-12 19:29:56 +0100
@@ -6,7 +6,7 @@
 # catalog-version 3.1
 Name:		texlive-bundledoc
 Version:	3.1
-Release:	3
+Release:	4
 Summary:	Bundle together all the files needed to build a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/bundledoc
@@ -48,11 +48,11 @@ filecontents* environment.
 %{_texmfdistdir}/scripts/bundledoc/bundledoc
 %{_texmfdistdir}/tex/latex/bundledoc/miktex.cfg
 %{_texmfdistdir}/tex/latex/bundledoc/texlive-unix.cfg
-%doc %{_texmfdistdir}/doc/support/bundledoc/README
 %doc %{_mandir}/man1/arlatex.1*
-%doc %{_texmfdir}/doc/man/man1/arlatex.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/arlatex.man1.pdf
 %doc %{_mandir}/man1/bundledoc.1*
-%doc %{_texmfdir}/doc/man/man1/bundledoc.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/bundledoc.man1.pdf
+%doc %{_texmfdistdir}/doc/support/bundledoc/README
 
 #-----------------------------------------------------------------------
 %prep
@@ -67,25 +67,6 @@ pushd %{buildroot}%{_bindir}
     ln -sf %{_texmfdistdir}/scripts/bundledoc/bundledoc bundledoc
 popd
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-
-
-%changelog
-* Tue Aug 07 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.1-3
-+ Revision: 812084
-- Update to latest release.
-
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.1-2
-+ Revision: 749891
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.1-1
-+ Revision: 717988
-- texlive-bundledoc
-- texlive-bundledoc
-- texlive-bundledoc
-- texlive-bundledoc
-- texlive-bundledoc
-
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
