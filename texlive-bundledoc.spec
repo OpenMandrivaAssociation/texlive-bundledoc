@@ -6,7 +6,7 @@
 # catalog-version 3.1
 Name:		texlive-bundledoc
 Version:	3.1
-Release:	5
+Release:	6
 Summary:	Bundle together all the files needed to build a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/bundledoc
