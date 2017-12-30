@@ -1,12 +1,6 @@
-# revision 29752
-# category Package
-# catalog-ctan /support/bundledoc
-# catalog-date 2012-01-12 19:29:56 +0100
-# catalog-license lppl
-# catalog-version 3.1
 Name:		texlive-bundledoc
-Version:	3.1
-Release:	12
+Version:	3.2
+Release:	1
 Summary:	Bundle together all the files needed to build a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/bundledoc
@@ -44,10 +38,8 @@ filecontents* environment.
 %files
 %{_bindir}/arlatex
 %{_bindir}/bundledoc
-%{_texmfdistdir}/scripts/bundledoc/arlatex
-%{_texmfdistdir}/scripts/bundledoc/bundledoc
-%{_texmfdistdir}/tex/latex/bundledoc/miktex.cfg
-%{_texmfdistdir}/tex/latex/bundledoc/texlive-unix.cfg
+%{_texmfdistdir}/scripts/bundledoc
+%{_texmfdistdir}/tex/latex/bundledoc
 %doc %{_mandir}/man1/arlatex.1*
 %doc %{_texmfdistdir}/doc/man/man1/arlatex.man1.pdf
 %doc %{_mandir}/man1/bundledoc.1*
