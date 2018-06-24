@@ -1,5 +1,5 @@
 Name:		texlive-bundledoc
-Version:	3.2
+Version:	3.3
 Release:	1
 Summary:	Bundle together all the files needed to build a LaTeX document
 Group:		Publishing
