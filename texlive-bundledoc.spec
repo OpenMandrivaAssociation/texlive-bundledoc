@@ -1,12 +1,12 @@
 Name:		texlive-bundledoc
-Version:	3.3
-Release:	3
+Version:	64620
+Release:	1
 Summary:	Bundle together all the files needed to build a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/bundledoc
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bundledoc.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bundledoc.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bundledoc.r64620.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bundledoc.doc.r64620.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +27,12 @@ document, together with the document itself, using the
 filecontents* environment.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -48,15 +48,15 @@ filecontents* environment.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/bundledoc/arlatex arlatex
-    ln -sf %{_texmfdistdir}/scripts/bundledoc/bundledoc bundledoc
+ln -sf %{_texmfdistdir}/scripts/bundledoc/arlatex arlatex
+ln -sf %{_texmfdistdir}/scripts/bundledoc/bundledoc bundledoc
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
