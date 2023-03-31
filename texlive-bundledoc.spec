@@ -1,6 +1,6 @@
 Name:		texlive-bundledoc
 Version:	64620
-Release:	1
+Release:	2
 Summary:	Bundle together all the files needed to build a LaTeX document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/bundledoc
