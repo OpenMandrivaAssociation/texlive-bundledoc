@@ -1,5 +1,6 @@
 %global tl_name bundledoc
 %global tl_revision 79024
+%global tl_bin_links arlatex:%{_texmfdistdir}/scripts/bundledoc/arlatex bundledoc:%{_texmfdistdir}/scripts/bundledoc/bundledoc
 
 Name:		texlive-%{tl_name}
 Epoch:		1
@@ -15,6 +16,8 @@ BuildArch:	noarch
 BuildSystem:	texlive
 Requires:	texlive(bundledoc.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 The bundledoc package is a post-processor for the snapshot package that
